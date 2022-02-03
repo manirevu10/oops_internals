@@ -1,0 +1,38 @@
+4. Write a program to illustrate this pointer
+// this pointer used to distinguish b/w local variable and data member having same name
+#include<iostream>
+using namespace std;
+class thispointer
+{
+ private:
+ int x;
+ public:
+ void getdata(int x)
+ {
+ cout << "Enter x value:";
+ cin>>this->x;
+ cout << "data member x=" << this->x << endl;
+ cout << "local variable x=" << x << endl;
+ }
+};
+int main()
+{
+ thispointer o1;
+ o1.getdata(1);
+}
+//this pointer to retrive object address
+#include<iostream>
+using namespace std;
+class thispointer
+{
+ public:
+ void getaddress()
+ {
+ cout << this;
+ }
+};
+int main()
+{
+ thispointer o1;
+ o1.getaddress();
+}

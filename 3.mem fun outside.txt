@@ -1,0 +1,21 @@
+3. Write a program Defining a member function outside the class.
+#include<iostream>
+using namespace std;
+class A
+{
+ private:
+ int a;
+ public:
+ void print();
+};
+void A :: print()
+{
+ cout << "Enter a value:";
+ cin >> a;
+ cout << "a = " << a;
+}
+int main()
+{
+ A obj;
+ obj.print();
+}

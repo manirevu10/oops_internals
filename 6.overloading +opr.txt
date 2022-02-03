@@ -1,0 +1,25 @@
+6. Write a c ++ program to implement the overloading assignment + operator
+#include<iostream>
+using namespace std;
+class addition
+{
+ private:
+ int a;
+ public:
+ void input()
+ {
+ cout << "Enter a value:";
+ cin >> a;
+ }
+ void operator +(addition obj)
+ {
+ cout << "addition of two objects = " << a+obj.a;
+ }
+};
+int main()
+{
+ addition obj1,obj2;
+ obj1.input();
+ obj2.input();
+ obj1+obj2;
+}

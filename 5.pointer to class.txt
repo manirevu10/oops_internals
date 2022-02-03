@@ -1,0 +1,22 @@
+5. Write a Program to illustrate pointer to a class
+#include<iostream>
+using namespace std;
+class pointer
+{
+ private:
+ int a,b;
+ public:
+ void print()
+ {
+ cout << "Enter a and b values:";
+ cin >> a >> b;
+ cout << "a = " << a << endl;
+ cout << "b = " << b << endl;
+ }
+};
+int main()
+{
+ pointer obj;
+ pointer *ptr = &obj;
+ ptr->print();
+}
